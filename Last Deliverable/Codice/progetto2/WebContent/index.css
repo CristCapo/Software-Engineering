@@ -1,0 +1,115 @@
+@CHARSET "ISO-8859-1";
+.hidden3{
+    display:none;
+    color:black;
+}
+.hidden4{
+    display:none;
+    color:black;
+}
+.hidden0{
+	display:none;
+	color:black;
+	
+	
+	
+}
+.hidden1{
+	display:none;
+	color:black;
+	
+}
+.hidden2{
+	display:none;
+	color:black;
+	
+}
+
+button{
+	background-color:transparent;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+}
+
+input .button{
+	
+	background-color:transparent;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+
+}
+
+body{
+background: url(http://www.superedo.it/sfondi/sfondi/Feste/Natale/natale_018.jpg) no-repeat top left;
+ background-size: cover; 
+}
+
+h1{
+	color:black;
+	text-align:center;
+	font-style: italic;
+}
+
+#chk0{
+	margin-left:20px;
+	
+}
+#chk1{
+	margin-left:20px;
+	
+	
+}
+#chk2{
+	margin-left:20px;
+	
+	
+}
+input{
+	background-color:#b0bec5;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+}
+div{
+	float:left;
+	margin-left :200px;
+	width:200px;
+	
+}
+
+#label0{
+	color:black;
+	font-style:italic;
+	font-size:20px;
+}
+#contenitore{
+	margin:0;
+}
+#primoDiv{
+	margin-left:20px;
+	
+	
+}
+
+
+#secondoDiv{
+	margin-left:20px;
+	
+	
+}
+#label1{
+	margin-left:-20px;	
+	border:solid;
+	border-color:transparent;
+}
+
+#label2{
+	margin-left:-20px;	
+	border:solid;
+	border-color:transparent;
+}

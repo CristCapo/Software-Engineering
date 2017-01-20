@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+
+var t=[]; 
+var tval=[];
+var chkNodi=[];
+var z=[];
+var zval=[];
+var chkArchi=[];
+var n=0;
+var m=0;
+var ciao;
+
+
+
+function creaAttributoNodi(){
+	var para = document.createElement("P");
+    t[n] = document.createElement("input");
+    t[n].name="parametroNodi"+n;
+	tval[n] = document.createElement("input");
+	tval[n].setAttribute("style","width: 50px");
+	tval[n].name="valoreNodi"+n;
+	var label = document.createElement("label");
+	label.innerHTML = "inserisci i parametri interi o decimali in queste forme 1-2 oppure 1.0-2.0";
+	var para2 = document.createElement("P");
+	para2.appendChild(tval[n]);
+	para2.appendChild(label);
+	
+    
+	
+	para.appendChild(t[n]);
+	n++;
+	
+	
+    document.getElementById("primoDiv").appendChild(para);
+	document.getElementById("primoDiv").appendChild(para2);
+}
+
+function creaAttributoArchi(){
+	var para = document.createElement("P");
+    z[m] = document.createElement("input");
+    z[m].name="parametroArchi"+m;
+    zval[m] = document.createElement("input");
+    zval[m].setAttribute("style","width: 50px");
+    zval[m].name="valoreArchi"+m;
+	var label = document.createElement("label");
+	label.innerHTML = "inserisci i parametri interi o decimali in queste forme 1-2 oppure 1.0-2.0";
+	var para2 = document.createElement("P");
+	para2.appendChild(zval[m]);
+	para2.appendChild(label);
+    para.appendChild(z[m]);
+	m++;
+    document.getElementById("secondoDiv").appendChild(para);
+    document.getElementById("secondoDiv").appendChild(para2);
+}
+
+
+function showHide(){
+	var radio0 = document.getElementById("chk0");
+	var radio1 = document.getElementById("chk1");
+	var radio2 = document.getElementById("chk2");
+	var hiddeninputs0=document.getElementsByClassName("hidden0");
+    var hiddeninputs1=document.getElementsByClassName("hidden1");
+	var hiddeninputs2=document.getElementsByClassName("hidden2");
+    var hiddeninputs3=document.getElementsByClassName("hidden3");
+    var hiddeninputs4=document.getElementsByClassName("hidden4");
+    var hiddeninputs5=document.getElementsByClassName("hidden5");
+	
+	if(radio0.checked){
+        for(var i = 0; i !== hiddeninputs3.length; i++){
+	    
+		 	hiddeninputs3[i].style.display="block";
+		
+		}
+	
+	for(var i = 0; i !== hiddeninputs0.length; i++){
+	    
+		 	hiddeninputs0[i].style.display="block";
+		
+		}
+	
+	}
+	if(!radio0.checked){
+        for(var i = 0; i !== hiddeninputs3.length; i++){
+	    
+		 	hiddeninputs3[i].style.display="none";
+		}
+	for(var i = 0; i !== hiddeninputs0.length; i++){
+	    
+		 	hiddeninputs0[i].style.display="none";
+		}
+	}
+	
+	
+	if(radio1.checked){
+		for(var i = 0; i !== hiddeninputs5.length; i++){
+		    
+		 	hiddeninputs5[i].style.display="block";
+		}
+		
+		
+	for(var j =0;j!== t.length;j++){
+		t[j].style.display="none";
+		}
+		
+	for(var k = 0; k!== z.length;k++){
+		z[k].style.display="none";
+	}
+	for(var i = 0; i !== hiddeninputs1.length; i++){
+	    
+		 	hiddeninputs1[i].style.display="block";
+			
+			
+		}
+	
+	}
+	if(!radio1.checked){
+		for(var i = 0; i !== hiddeninputs5.length; i++){
+		    
+		 	hiddeninputs5[i].style.display="none";
+		}
+		
+		
+	for(var i = 0; i !== hiddeninputs1.length; i++){
+	    
+		 	hiddeninputs1[i].style.display="none";
+			
+		}
+	}
+	
+	if(radio2.checked){
+		for(var i = 0; i !== hiddeninputs4.length; i++){
+		    
+		 	hiddeninputs4[i].style.display="block";
+		}
+		
+		for(var j =0;j !== t.length;j++){
+		t[j].style.display="none";
+		}
+		
+	for(var k = 0; k!== z.length;k++){
+		z[k].style.display="none";
+	}
+	for(var i = 0; i !== hiddeninputs2.length; i++){
+	    
+		 	hiddeninputs2[i].style.display="block";
+			
+	}
+        
+	}
+	if(!radio2.checked){
+		for(var i = 0; i !== hiddeninputs4.length; i++){
+		    
+		 	hiddeninputs4[i].style.display="none";
+		}
+	for(var i = 0; i !== hiddeninputs2.length; i++){
+	    
+		 	hiddeninputs2[i].style.display="none";
+			
+		}
+	}
+	
+	
+	
+	
+}
+
+</script>
+<title>prova</title>
+
+<link href="index.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+	<h1>Web planner path calculator</h1>
+	<br/>
+	<br/>
+	<br/>
+
+
+	<div>
+		<input type="radio" name ="checkbox" id ="chk0" onClick="showHide();"/>
+            <label for ="chk0" id = "label0"> CREA ALBERO</label>
+		
+		<form action="servlet1" method ="get" class="hidden0">
+            
+            <br/>
+            <br/>
+  
+            <label class ="hidden3" id ="chk0" for="id">ID</label>
+                <input id ="chk0" type="text" name ="id" class ="hidden0"/>
+            <br/>
+            <label class ="hidden3" id ="chk0" for="split">SPLIT SIZE </label>
+                <input id ="chk0" type="text" name ="split" class ="hidden0"/>
+            <br/>
+ 
+            <label class ="hidden3" id ="chk0" for="depth">DEPTH </label>
+                 <input id ="chk0" type="text" name ="depth" class ="hidden0"/>
+            <br/>
+            <!--<label class ="hidden3" id ="chk0" for="rule">FIRST ATTRIBUTE VALUE </label> 
+   		<input id ="chk0" type="text" name ="valore random iniziale" class ="hidden0"/>-->
+           <!-- <br/>
+            <label class ="hidden3" id ="chk0" for="rule">LAST ATTRIBUTE VALUE </label>
+   		<input id ="chk0" type="text" name ="valore random finale" class ="hidden0"/>-->
+            <br/>
+            <div id="contenitore">
+  		<div id="primoDiv">
+  			<div id="label1">
+                            <label class ="hidden3" id ="chk0" for="attribute">ATTRIBUTE NODE </label>
+   			</div>
+   			<br/>
+   		</div>
+   		<br/>
+   
+   		<input style ="background-color:transparent" type ="button" value="aggiungi" id ="chk0"   name ="attribute" class ="hidden3" onClick="creaAttributoNodi()"/>
+   
+   		<br/>
+   		<div id="secondoDiv">
+                    <div id="label2">
+   			<label class ="hidden3" id ="chk0" for="attribute">ATTRIBUTE ARCS </label>
+                    </div>
+                    <br/>
+   		</div>
+   		<input style ="background-color:transparent" type="button" value="aggiungi" id ="chk0"   name ="attribute" class ="hidden3" onClick="creaAttributoArchi()"/>
+   		<br/>
+   
+   		<input style ="background-color:transparent" type="submit" class ="hidden3" id ="chk0" value="crea albero"/>
+  		<br/>
+            </div>
+       </form>
+  	</div>
+  	
+  	<div>
+            <input type="radio" name ="checkbox" id ="chk2" onClick="showHide()"/>
+                <label for ="chk2" id="label0" > ELIMINA ALBERO</label>
+                <form action="servlet1" method ="get" class="hidden2">
+             <br/>
+             <br/>
+  
+            <label class ="hidden2" id ="chk2" for="inserisci">ID ALBERO </label>
+                <input id ="chk2" type="text" name ="inserisci" class ="hidden2"/>
+            <br/>
+            <input style ="background-color:transparent" type="submit" class ="hidden4" id ="chk0" value="elimina"/>
+  
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            </form>
+        </div>
+   	<div >
+            <input type="radio" name ="checkbox" id ="chk1" onClick="showHide()"/>
+                <label for ="chk1" id="label0"> USA ALBERO</label>
+                <form action="servlet1" method ="get" class="hidden1">
+            <br/>
+            <br/>
+            <label for ="id" class ="hidden1" id ="chk1">ID ALBERO </label>
+                <input id ="chk1" type="text" name ="id" class ="hidden1"/>
+            <br/>
+            <label for="inizio" class ="hidden1" id ="chk1">VERTICE INIZIO </label>
+                <input id ="chk1" type="text" name ="inizio" class ="hidden1"/>
+            <br/>
+            <label for ="fine" class ="hidden1 " id ="chk1">VERTICE FINE </label>
+                <input id ="chk1"  type="text" name ="fine" class ="hidden1"/>
+            <br/>
+            <input style ="background-color:transparent" type="submit" class ="hidden5" id ="chk0" value="calcola"/>
+            <br/>
+            <br/>
+            </form>
+        </div>
+    <div id="output"></div>
+</body>
+</html>
